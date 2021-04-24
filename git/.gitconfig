@@ -1,0 +1,35 @@
+[user]
+    name = Adam Litton
+    email = adamnationx@gmail.com
+
+[core]
+    editor = code --wait --disable-extensions
+
+[alias]
+    s         = status -sb
+    co        = checkout
+    d         = diff
+    dn        = diff --name-status
+    amend     = commit --amend
+
+    # logs
+    l         = log
+    lg        = log --color --graph --abbrev-commit
+    lga       = !git lg --all
+    lgs       = !git lga --status
+    lgp       = !git lga -p
+    in        = !git lga ..FETCH_HEAD
+    incoming  = !git fetch; !git in
+    unpushed  = !git lga --branches --not --remotes=origin
+
+
+    conflicts = diff --name-only --diff-filter=U
+
+    # show list of contributors in descending order by number of commits
+    rank = shortlog -sn --no-merges
+
+[log]
+    decorate = auto
+
+[format]
+    pretty = %Cred%h%Creset -%C(yellow)%d%N%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
