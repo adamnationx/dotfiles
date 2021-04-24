@@ -28,6 +28,9 @@
     # show list of contributors in descending order by number of commits
     rank      = shortlog -sn --no-merges
 
+    # list all aliases
+    la        = !git config -l | grep alias | cut -c 7-
+
 [log]
     decorate = auto
 
