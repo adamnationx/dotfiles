@@ -12,6 +12,7 @@
     d         = diff
     dn        = diff --name-status
     amend     = commit --amend
+    unstage   = reset HEAD --
 
     # logs
     l         = log
