@@ -23,11 +23,10 @@
     incoming  = !git fetch; !git in
     unpushed  = !git lga --branches --not --remotes=origin
 
-
     conflicts = diff --name-only --diff-filter=U
 
     # show list of contributors in descending order by number of commits
-    rank = shortlog -sn --no-merges
+    rank      = shortlog -sn --no-merges
 
 [log]
     decorate = auto
