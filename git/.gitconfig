@@ -4,6 +4,7 @@
 
 [core]
     editor = code --wait --disable-extensions
+    autocrlf = true
 
 [alias]
     s         = status -sb
@@ -33,3 +34,7 @@
 
 [format]
     pretty = %Cred%h%Creset -%C(yellow)%d%N%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+
+[push]
+    # git push will push only the current branch to the one that git pull would pull from, and also checks that their names match.
+    default = simple
