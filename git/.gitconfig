@@ -3,8 +3,9 @@
     email = adamnationx@gmail.com
 
 [core]
-    editor = code --wait --disable-extensions
+    editor = code --wait --new-window --disable-extensions
     autocrlf = true
+    excludesFile = '~/.gitignore'
 
 [alias]
     s         = status -sb
