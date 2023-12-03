@@ -16,8 +16,8 @@
     unstage   = reset HEAD --
 
     # logs
-    l         = log
-    lg        = log --color --graph --abbrev-commit
+    l         = log --date=relative
+    lg        = log --date=relative --color --graph --abbrev-commit
     lga       = !git lg --all
     lgs       = !git lga --status
     lgp       = !git lga -p
@@ -37,7 +37,7 @@
     decorate = auto
 
 [format]
-    pretty = %Cred%h%Creset -%C(yellow)%d%N%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+    pretty = %Cred%h%Creset -%C(yellow)%d%N%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset
 
 [push]
     # git push will push only the current branch to the one that git pull would pull from, and also checks that their names match.
