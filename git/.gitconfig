@@ -42,3 +42,15 @@
 [push]
     # git push will push only the current branch to the one that git pull would pull from, and also checks that their names match.
     default = simple
+
+[diff]
+    tool = default-difftool
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = code
+
+[mergetool "code"]
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
